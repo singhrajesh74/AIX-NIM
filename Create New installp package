@@ -1,0 +1,10 @@
+On NIM Server:
+  cd /ngis/PROD/SCRIPTS/package/build
+  cp -p /ngis/PROD/SCRIPTS/AIX_build_NGIS.ksh .
+  # vi template file to update 2 VRMF lines (I have been using date of script i.e. 20.19.18.09 for 09/18/2019)
+  cd ../
+  # Do a cleanup before building new version
+  # MAKE SURE YOU ARE IN /ngis/PROD/SCRIPTS/package
+  rm -rf .info    
+  mkinstallp -d /ngis/PROD/SCRIPTS/package -T /ngis/PROD/SCRIPTS/package/build/template
+  # New installp package will be in /ngis/PROD/SCRIPTS/package/tmp
